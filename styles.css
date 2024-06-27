@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0 20px;
+    box-sizing: border-box;
+}
+
+#models, #showcase, #about {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#models h1, #showcase h1, #about h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#models p, #showcase p, #about p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.model-grid, .showcase-grid, .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.model, .showcase-item, .about-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.model h2, .showcase-item p, .about-item p {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.showcase-item p, .about-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Image Styles */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #ddd;
+}
