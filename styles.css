@@ -58,23 +58,74 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Side Menu Styles */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background: #555;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2em;
+    margin-left: 50px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
 /* Section Styles */
 section {
     padding: 100px 0 20px;
     box-sizing: border-box;
 }
 
-#models, #showcase, #about {
+#models, #showcase, #about, #contact {
     background-color: #f0f0f0;
     text-align: center;
 }
 
-#models h1, #showcase h1, #about h1 {
+#models h1, #showcase h1, #about h1, #contact h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#models p, #showcase p, #about p {
+#models p, #showcase p, #about p, #contact p {
     font-size: 1.2em;
     margin-bottom: 40px;
 }
@@ -101,6 +152,58 @@ section {
 .showcase-item p, .about-item p {
     font-size: 1em;
     color: #555;
+}
+
+/* Contact Form Styles */
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
 }
 
 /* Image Styles */
@@ -130,4 +233,35 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #ddd;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    section {
+        padding: 80px 0 20px;
+    }
+
+    .model, .showcase-item, .about-item {
+        flex: 1 1 100%;
+    }
+
+    #models h1, #showcase h1, #about h1, #contact h1 {
+        font-size: 2em;
+    }
+
+    #models p, #showcase p, #about p, #contact p {
+        font-size: 1em;
+    }
 }
